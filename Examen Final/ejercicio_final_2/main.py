@@ -23,19 +23,16 @@ la lista (lista de la regla 2), retornar este valor e imprimirlo por consola.
 Crear el archivo main.py,
 """
 
+from funciones import genera_lista, no_repetidos, ordenar
+
 try:
     total = int(input("Ingrese Cantidad de números aleatorios: "))
 except ValueError:
     print("Debe ingresar un número entero.")
-    return
 
-lista = generar_lista(total)
+lista = genera_lista(total)
 
-# Paso 2: Obtener números no repetidos
-lista_sin_repetidos = obtener_no_repetidos(lista)
+lista_sin_repetidos = no_repetidos(lista)
 
-# Paso 3: Ordenar lista
-ordenar_lista(lista_sin_repetidos)
+ordenar(lista_sin_repetidos)
 
-# Paso 4: Obtener mayor número par
-obtener_mayor_par(lista_sin_repetidos)
